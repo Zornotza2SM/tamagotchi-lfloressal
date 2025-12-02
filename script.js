@@ -1,16 +1,19 @@
 // --- MODELOA ---
-let hambre = 5;
-let felicidad = 5;
+let hambre = 2;
+let felicidad = 2;
 
 // --- BISTA ---
 function vista() {
+
+    let estaMuerto = (hambre >= 10 || felicidad <= 0);
+
     // 1. HTMLa sortzen dugu
     document.getElementById("app").innerHTML = `
         <div class="pet-screen">
             <h1>PIXEL PET</h1>
             
             <div class="pet-face">
-                👾 
+                ${estaMuerto ? "💀" : "👾"}
             </div>
 
             <div class="stats">
@@ -29,19 +32,22 @@ function vista() {
         // --- EGUNERATZEA (Gertaerak) ---
     
     document.getElementById("btn-comer").onclick = () => {
-        // Logika: Gosea 0 baino handiagoa bada, 1 kentzen dugu.
-        if (hambre > 0) {
+        if (!estaMuerto) {
+                    if (hambre > 0) {
             hambre--; 
         }
         vista(); // GARRANTZITSUA: Berriro margotzen dugu
+        }// Logika: Gosea 0 baino handiagoa bada, 1 kentzen dugu.
     }
 
     document.getElementById("btn-jugar").onclick = () => {
+        if (!estaMuerto) {
         // Logika: Zoriontasuna 10 baino txikiagoa bada, 1 gehitzen dugu.
         if (felicidad < 10) {
             felicidad++; // Osatu hau
         }
         vista(); // Bista birkargatzen dugu
+        }
     }
 }
 
