@@ -46,3 +46,30 @@ function vista() {
 }
 
 vista();
+
+
+// --- DENBORA BEGIZTA (LOOP) ---
+
+function pasoDelTiempo() {
+    // 2 segundoro (2000ms), maskotak okerrera egiten du
+    setTimeout(() => {
+        
+        // 1. Estatistikak okertzen ditugu
+        hambre++;      // Gosea sartzen zaio
+        felicidad--;   // Tristetu egiten da
+
+        // 2. Balioak mugatzen ditugu (infinituak izan ez daitezen)
+        if (hambre > 10) hambre = 10;
+        if (felicidad < 0) felicidad = 0;
+
+        // 3. Pantaila eguneratzen dugu
+        vista();
+
+        // 4. Tenporizadoreari berriro deitzen diogu (Begizta infinitua)
+        pasoDelTiempo();
+
+    }, 2000);
+}
+
+// DENBORA HASI
+pasoDelTiempo();
