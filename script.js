@@ -6,7 +6,7 @@ let felicidad = 2;
 function vista() {
 
     let estaMuerto = (hambre >= 10 || felicidad <= 0);
-
+    let urlCorazon ="Heart.json"; // Bihotz taupakaria
     // 1. HTMLa sortzen dugu
     document.getElementById("app").innerHTML = `
         <div class="pet-screen">
@@ -16,10 +16,17 @@ function vista() {
                 ${estaMuerto ? "💀" : "👾"}
             </div>
 
-            <div class="stats">
-                <div>🍗 Gosea: ${hambre}</div>
-                <div>❤️ Zoriontasuna: ${felicidad}</div>
+        <div class="stats">
+            <div style="display:flex; align-items:center; flex-direction:column">
+                <lottie-player src="Bouncing Burger.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;" loop autoplay></lottie-player>
+                <span>Gosea: ${hambre}</span>
             </div>
+
+            <div style="display:flex; align-items:center; flex-direction:column">
+                <lottie-player src="${urlCorazon}"  background="transparent"  speed="1"  style="width: 50px; height: 50px;" loop autoplay></lottie-player>
+                <span>Zoriontasuna: ${felicidad}</span>
+            </div>
+        </div>
 
             <div class="controls">
                 <button class="boton" id="btn-comer">Jana eman</button>

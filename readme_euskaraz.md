@@ -363,6 +363,24 @@ Bilatu `div class="stats"` hori `vista()` barruan eta aldatu honegatik. Fijatu n
             <lottie-player src="${urlCorazon}"  background="transparent"  speed="1"  style="width: 50px; height: 50px;" loop autoplay></lottie-player>
             <span>Zoriontasuna: ${felicidad}</span>
         </div>
+    </div>// Logika bisuala:
+    // Zoriontasuna baxua bada (< 4), bihotz hautsia jartzen dugu. Bestela, taupaka ari dena.
+    let urlCorazon = felicidad < 4 
+        ? "https://assets9.lottiefiles.com/private_files/lf30_434185.json" // Bihotz hautsia
+        : "https://assets10.lottiefiles.com/packages/lf20_7z8wtyb0.json"; // Bihotz taupakaria
+
+    // HTML bista barruan:
+    // ... return edo innerHTML barruan ...
+    <div class="stats">
+        <div style="display:flex; align-items:center; flex-direction:column">
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_j1adxa sv.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;" loop autoplay></lottie-player>
+            <span>Gosea: ${hambre}</span>
+        </div>
+
+        <div style="display:flex; align-items:center; flex-direction:column">
+            <lottie-player src="${urlCorazon}"  background="transparent"  speed="1"  style="width: 50px; height: 50px;" loop autoplay></lottie-player>
+            <span>Zoriontasuna: ${felicidad}</span>
+        </div>
     </div>
 ```
 
