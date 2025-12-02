@@ -121,8 +121,8 @@ function vista() {
             </div>
 
             <div class="stats">
-                <div>🍗 Gosea: ${________}</div>
-                <div>❤️ Zoriontasuna: ${________}</div>
+                <div>🍗 Gosea: ${hambre}</div>
+                <div>❤️ Zoriontasuna: ${felicidad}</div>
             </div>
 
             <div class="controls">
@@ -139,7 +139,7 @@ function vista() {
 vista();
 ```
 
-> **✅ PROBA:** Gorde eta ireki nabigatzailea. Maskota eta 0 eta 10 zenbakiak ikusi beharkozenituzke. Zenbakiak ikusten ez badituzu, berrikusi aldagaiak.
+> **✅ PROBA:** Gorde eta ireki nabigatzailea. Maskota eta 0 eta 10 zenbakiak ikusi beharko zenituzke. Zenbakiak ikusten ez badituzu, berrikusi aldagaiak.
 
 :octocat: Igo aldaketak biltegira mezu honekin: "1. Maila osatuta: Modeloa eta Bista".
 
