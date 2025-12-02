@@ -171,7 +171,7 @@ Gehitu kode hau `vista()` funtzioaren barruan, "HEMEN JOANGO DIRA GERTAERAK" dio
     document.getElementById("btn-jugar").onclick = () => {
         // Logika: Zoriontasuna 10 baino txikiagoa bada, 1 gehitzen dugu.
         if (felicidad < 10) {
-            ________++; // Osatu hau
+            felicidad++; // Osatu hau
         }
         vista(); // Bista birkargatzen dugu
     }

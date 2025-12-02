@@ -1,6 +1,6 @@
 // --- MODELOA ---
-let hambre = 0;
-let felicidad = 10;
+let hambre = 5;
+let felicidad = 5;
 
 // --- BISTA ---
 function vista() {
@@ -26,6 +26,23 @@ function vista() {
     `;
 
     // HEMEN JOANGO DIRA GERTAERAK (3. FASEA)
+        // --- EGUNERATZEA (Gertaerak) ---
+    
+    document.getElementById("btn-comer").onclick = () => {
+        // Logika: Gosea 0 baino handiagoa bada, 1 kentzen dugu.
+        if (hambre > 0) {
+            hambre--; 
+        }
+        vista(); // GARRANTZITSUA: Berriro margotzen dugu
+    }
+
+    document.getElementById("btn-jugar").onclick = () => {
+        // Logika: Zoriontasuna 10 baino txikiagoa bada, 1 gehitzen dugu.
+        if (felicidad < 10) {
+            felicidad++; // Osatu hau
+        }
+        vista(); // Bista birkargatzen dugu
+    }
 }
 
 vista();
