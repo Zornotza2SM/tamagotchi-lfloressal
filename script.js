@@ -1,7 +1,8 @@
 // --- MODELOA ---
 let hambre = 2;
 let felicidad = 2;
-
+let comiendo = false;
+let jugando = false; 
 // --- BISTA ---
 function vista() {
 
@@ -28,11 +29,15 @@ function vista() {
             </div>
         </div>
 
-            <div class="controls">
-                <button class="boton" id="btn-comer">Jana eman</button>
-                <button class="boton" id="btn-jugar">Jolastu</button>
-            </div>
-        </div>
+    <div class="controls">
+        <button class="boton" id="btn-comer" ${ comiendo ? "disabled" : "" }>
+            ${ comiendo ? "Murtxikatzen..." : "Jana eman" }
+        </button>
+
+        <button class="boton" id="btn-jugar" ${ jugando ? "disabled" : "" }>
+            ${ jugando ? "Nekatuta..." : "Jolastu" }
+        </button>
+    </div>
     `;
 
     // HEMEN JOANGO DIRA GERTAERAK (3. FASEA)
