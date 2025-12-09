@@ -45,20 +45,33 @@ function vista() {
     
     document.getElementById("btn-comer").onclick = () => {
         if (!estaMuerto) {
-                    if (hambre > 0) {
-            hambre--; 
+            if (hambre > 0) {
+                hambre--;
+            
+            // 1. Botoia blokeatzen dugu
+                comiendo = true;
+                vista(); // Botoi grisa margotzen dugu ("Murtxikatzen...")
+
+            // 2. Segundo 1eko (1000ms) tenporizadorea hasten dugu
+                setTimeout(() => {
+                    comiendo = false; // Desblokeatzen dugu
+                    vista(); // Botoi horia margotzen dugu berriro
+                }, 1000);
+            }
         }
-        vista(); // GARRANTZITSUA: Berriro margotzen dugu
-        }// Logika: Gosea 0 baino handiagoa bada, 1 kentzen dugu.
     }
 
     document.getElementById("btn-jugar").onclick = () => {
         if (!estaMuerto) {
-        // Logika: Zoriontasuna 10 baino txikiagoa bada, 1 gehitzen dugu.
-        if (felicidad < 10) {
-            felicidad++; // Osatu hau
-        }
-        vista(); // Bista birkargatzen dugu
+            if (felicidad < 10) {
+                felicidad++;
+                jugando = true;
+                vista();
+                setTimeout(() => {
+                    jugando = false;
+                    vista();
+                }, 2000);
+            }
         }
     }
 }
